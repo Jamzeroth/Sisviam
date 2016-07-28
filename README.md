@@ -1,2 +1,0 @@
-# Sisviam
-Administracion DEVIAM
