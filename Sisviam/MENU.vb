@@ -24,4 +24,16 @@
         Campania.MdiParent = Me
         Campania.Show()
     End Sub
+
+    Private Sub MENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim ctl As Control
+        Dim ctlMDI As MdiClient
+        For Each ctl In Me.Controls
+            Try
+                ctlMDI = CType(ctl, MdiClient)
+                ctlMDI.BackColor = Me.BackColor
+            Catch exc As InvalidCastException
+            End Try
+        Next
+    End Sub
 End Class
