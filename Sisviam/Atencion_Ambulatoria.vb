@@ -22,11 +22,13 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Can.Dispose()
         Can.MdiParent = Me.ParentForm
         Can.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Persona.Dispose()
         Persona.MdiParent = Me.ParentForm
         Persona.Show()
     End Sub

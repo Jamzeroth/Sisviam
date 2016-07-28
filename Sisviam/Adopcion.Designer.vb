@@ -27,6 +27,8 @@ Partial Class Adopcion
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -35,8 +37,6 @@ Partial Class Adopcion
         Me.CanCmb = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -73,6 +73,16 @@ Partial Class Adopcion
         '
         Me.ColumnHeader4.Text = "Telefono"
         Me.ColumnHeader4.Width = 71
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "F. de entrega"
+        Me.ColumnHeader5.Width = 75
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Seguimiento"
+        Me.ColumnHeader6.Width = 81
         '
         'Button4
         '
@@ -153,16 +163,6 @@ Partial Class Adopcion
         Me.Label1.Size = New System.Drawing.Size(26, 13)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Can"
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "F. de entrega"
-        Me.ColumnHeader5.Width = 75
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Seguimiento"
-        Me.ColumnHeader6.Width = 81
         '
         'Label3
         '
