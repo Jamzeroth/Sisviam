@@ -109,6 +109,7 @@ Partial Class Persona
         Me.Controls.Add(Me.Label1)
         Me.MinimumSize = New System.Drawing.Size(300, 200)
         Me.Name = "Persona"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Persona"
         Me.ResumeLayout(False)
         Me.PerformLayout()

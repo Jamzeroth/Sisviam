@@ -94,6 +94,7 @@
     <Compile Include="Can.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Conexion.vb" />
     <Compile Include="MENU.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +170,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

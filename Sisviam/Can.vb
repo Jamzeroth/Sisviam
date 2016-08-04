@@ -10,7 +10,7 @@
     Private observacion As String
 
     Public Function Ingresar_Can()
-        'Manda a la base de datos objeto Me
+        'Envia a la base de datos objeto Me
         id_can = Asignar_id_Can()
         nombre = NombreTxt.Text
         raza = RazaTxt.Text
@@ -31,7 +31,7 @@
 
     Public Function Asignar_id_Can() As Integer
         'Se obtiene numero aleatorio para asignar
-        Dim val As Integer = 1
+        Dim val As Integer = CInt(Rnd(10))
         Return val
     End Function
 

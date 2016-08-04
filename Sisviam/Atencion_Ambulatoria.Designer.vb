@@ -64,7 +64,7 @@ Partial Class Atencion_Ambulatoria
         Me.CanCmb.Location = New System.Drawing.Point(104, 261)
         Me.CanCmb.Name = "CanCmb"
         Me.CanCmb.Size = New System.Drawing.Size(140, 21)
-        Me.CanCmb.TabIndex = 2
+        Me.CanCmb.TabIndex = 1
         Me.CanCmb.Text = "Seleccione Can"
         '
         'ResponsableCmb
@@ -83,7 +83,7 @@ Partial Class Atencion_Ambulatoria
         Me.Button1.Location = New System.Drawing.Point(332, 259)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Ingresar Can"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -93,27 +93,27 @@ Partial Class Atencion_Ambulatoria
         Me.Button2.Location = New System.Drawing.Point(310, 286)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(123, 23)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Ingresar Responsable"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button3.Location = New System.Drawing.Point(269, 326)
+        Me.Button3.Location = New System.Drawing.Point(134, 326)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 6
+        Me.Button3.TabIndex = 5
         Me.Button3.Text = "Guardar"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
         Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button4.Location = New System.Drawing.Point(138, 326)
+        Me.Button4.Location = New System.Drawing.Point(274, 326)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 7
+        Me.Button4.TabIndex = 6
         Me.Button4.Text = "Modificar"
         Me.Button4.UseVisualStyleBackColor = True
         '

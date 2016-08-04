@@ -1,6 +1,7 @@
 ﻿Public Class MENU
 
     Private Sub CanesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CanesToolStripMenuItem.Click
+        Can.Dispose()
         Can.MdiParent = Me
         Can.Show()
     End Sub

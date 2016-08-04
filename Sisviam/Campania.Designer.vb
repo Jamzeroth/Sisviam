@@ -144,20 +144,20 @@ Partial Class Campania
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button1.Location = New System.Drawing.Point(276, 276)
+        Me.Button1.Location = New System.Drawing.Point(156, 276)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
+        Me.Button1.TabIndex = 5
         Me.Button1.Text = "Guardar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button2.Location = New System.Drawing.Point(130, 276)
+        Me.Button2.Location = New System.Drawing.Point(259, 276)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 10
+        Me.Button2.TabIndex = 6
         Me.Button2.Text = "Modificar"
         Me.Button2.UseVisualStyleBackColor = True
         '
