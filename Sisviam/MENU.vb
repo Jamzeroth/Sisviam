@@ -36,5 +36,11 @@
             Catch exc As InvalidCastException
             End Try
         Next
+        If (Not Conectar()) Then MsgBox("No se Puede Acceder a la Base de Datos")
+    End Sub
+
+    Private Sub PersonaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PersonaToolStripMenuItem.Click
+        Persona.MdiParent = Me
+        Persona.Show()
     End Sub
 End Class

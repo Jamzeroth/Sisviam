@@ -31,6 +31,7 @@ Partial Class MENU
         Me.MiembrosYVoluntariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CampañasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,7 +47,7 @@ Partial Class MENU
         '
         'InicioToolStripMenuItem
         '
-        Me.InicioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CanesToolStripMenuItem, Me.AdopcionesToolStripMenuItem, Me.AtencionesAmbulatoriosToolStripMenuItem, Me.MiembrosYVoluntariosToolStripMenuItem, Me.CampañasToolStripMenuItem})
+        Me.InicioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CanesToolStripMenuItem, Me.AdopcionesToolStripMenuItem, Me.AtencionesAmbulatoriosToolStripMenuItem, Me.MiembrosYVoluntariosToolStripMenuItem, Me.CampañasToolStripMenuItem, Me.PersonaToolStripMenuItem})
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
         Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.InicioToolStripMenuItem.Text = "Inicio"
@@ -92,6 +93,12 @@ Partial Class MENU
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
+        'PersonaToolStripMenuItem
+        '
+        Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
+        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.PersonaToolStripMenuItem.Text = "Persona"
+        '
         'MENU
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -126,5 +133,6 @@ Partial Class MENU
     Friend WithEvents CampañasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MiembrosYVoluntariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PersonaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
