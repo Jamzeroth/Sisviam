@@ -84,4 +84,18 @@
         Listar()
         Limpiar()
     End Sub
+
+    Private Sub ListView1_SelectedIndexChanged_UsingItems(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
+        Dim breakfast As ListView.SelectedListViewItemCollection = Me.ListView1.SelectedItems
+        Dim item As ListViewItem
+        Dim price As Double = 0.0
+        For Each item In breakfast
+            price += Double.Parse(item.SubItems(1).Text)
+        Next
+        ' Output the price to TextBox1.
+        TextBox1.Text = CType(price, String)
+    End Sub
+
+
+
 End Class

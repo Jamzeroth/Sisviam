@@ -16,25 +16,60 @@ Module Base_Datos
         Return True
     End Function
 
-    Public Function BuscarID(ByVal columna As String) As Integer
-        Dim Da As New MySql.Data.MySqlClient.MySqlDataAdapter(BDcadena, BDconexion)
-        Dim Ds As New DataSet
-        Da.Fill(Ds, "ID")
-        Dim Ot As DataTable
-        Ot = Ds.Tables("ID")
-        Dim Ofil As DataRow
-        Dim cont As Integer = 1
-        For Each Ofil In Ot.Rows
-            If (cont = CInt(Ofil.Item(columna))) Then
-                cont += 1
-            Else
-                Return cont
-            End If
-        Next
-        Return cont
-    End Function
-
-    Public Sub Cerrar()
+    Public Sub Desconectar()
         BDconexion.Close()
     End Sub
+
+    Public Function AsignarId(ByVal columna As String) As Integer
+        Try
+            Dim adaptabla As New MySql.Data.MySqlClient.MySqlDataAdapter(BDcadena, BDconexion)
+            Dim initabla As New DataSet
+            adaptabla.Fill(initabla, "ID")
+            Dim resultabla As DataTable
+            resultabla = initabla.Tables("ID")
+            Dim tablafila As DataRow
+            Dim cont As Integer = 0
+            For Each tablafila In resultabla.Rows
+                If (cont = CInt(tablafila.Item(columna))) Then
+                    cont += 1
+                Else
+                    Return cont
+                End If
+            Next
+            Return cont
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Function
+
+    Public Function ObtenerTabla() As DataTable
+        Try
+            Dim adaptabla As New MySql.Data.MySqlClient.MySqlDataAdapter(BDcadena, BDconexion)
+            Dim initabla As New DataSet
+            adaptabla.Fill(initabla, "Tabla")
+            Dim resultabla As DataTable
+            resultabla = initabla.Tables("Tabla")
+            Return resultabla
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Function
+
+    Public Function Almacenar_Datos()
+        Try
+            Dim Ejecuta As New MySql.Data.MySqlClient.MySqlCommand(BDcadena, BDconexion)
+            Ejecuta.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Function
+
+    Public Function Actualizar_Datos()
+        Try
+            Dim Ejecuta As New MySql.Data.MySqlClient.MySqlCommand(BDcadena, BDconexion)
+            Ejecuta.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Function
 End Module

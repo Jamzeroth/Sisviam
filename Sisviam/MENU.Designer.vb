@@ -30,8 +30,8 @@ Partial Class MENU
         Me.AtencionesAmbulatoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MiembrosYVoluntariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CampañasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,6 +82,12 @@ Partial Class MENU
         Me.CampañasToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
         Me.CampañasToolStripMenuItem.Text = "Campañas"
         '
+        'PersonaToolStripMenuItem
+        '
+        Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
+        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
+        Me.PersonaToolStripMenuItem.Text = "Persona"
+        '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -92,12 +98,6 @@ Partial Class MENU
         Me.PictureBox1.Size = New System.Drawing.Size(143, 59)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
-        '
-        'PersonaToolStripMenuItem
-        '
-        Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
-        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
-        Me.PersonaToolStripMenuItem.Text = "Persona"
         '
         'MENU
         '
