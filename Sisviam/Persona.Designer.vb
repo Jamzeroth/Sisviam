@@ -28,10 +28,10 @@ Partial Class Persona
         Me.NombreTxt = New System.Windows.Forms.TextBox()
         Me.DireccionTxt = New System.Windows.Forms.TextBox()
         Me.TelefonoTxt = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GuardarBtn = New System.Windows.Forms.Button()
+        Me.ModificarBtn = New System.Windows.Forms.Button()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -88,47 +88,50 @@ Partial Class Persona
         Me.TelefonoTxt.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTxt.TabIndex = 3
         '
-        'Button1
+        'GuardarBtn
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button1.Location = New System.Drawing.Point(222, 323)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GuardarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.GuardarBtn.Location = New System.Drawing.Point(222, 323)
+        Me.GuardarBtn.Name = "GuardarBtn"
+        Me.GuardarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.GuardarBtn.TabIndex = 4
+        Me.GuardarBtn.Text = "Guardar"
+        Me.GuardarBtn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ModificarBtn
         '
-        Me.Button2.Location = New System.Drawing.Point(347, 323)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ModificarBtn.Location = New System.Drawing.Point(347, 323)
+        Me.ModificarBtn.Name = "ModificarBtn"
+        Me.ModificarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.ModificarBtn.TabIndex = 5
+        Me.ModificarBtn.Text = "Modificar"
+        Me.ModificarBtn.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'TablaDgv
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(613, 203)
-        Me.DataGridView1.TabIndex = 6
+        Me.TablaDgv.AllowUserToAddRows = False
+        Me.TablaDgv.AllowUserToDeleteRows = False
+        Me.TablaDgv.AllowUserToOrderColumns = True
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TablaDgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TablaDgv.Location = New System.Drawing.Point(12, 12)
+        Me.TablaDgv.MultiSelect = False
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.ReadOnly = True
+        Me.TablaDgv.RowHeadersVisible = False
+        Me.TablaDgv.Size = New System.Drawing.Size(613, 203)
+        Me.TablaDgv.TabIndex = 6
         '
         'Persona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(637, 358)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TablaDgv)
+        Me.Controls.Add(Me.ModificarBtn)
+        Me.Controls.Add(Me.GuardarBtn)
         Me.Controls.Add(Me.TelefonoTxt)
         Me.Controls.Add(Me.DireccionTxt)
         Me.Controls.Add(Me.NombreTxt)
@@ -139,7 +142,7 @@ Partial Class Persona
         Me.Name = "Persona"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Persona"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,7 +153,7 @@ Partial Class Persona
     Friend WithEvents NombreTxt As System.Windows.Forms.TextBox
     Friend WithEvents DireccionTxt As System.Windows.Forms.TextBox
     Friend WithEvents TelefonoTxt As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents GuardarBtn As System.Windows.Forms.Button
+    Friend WithEvents ModificarBtn As System.Windows.Forms.Button
+    Friend WithEvents TablaDgv As System.Windows.Forms.DataGridView
 End Class

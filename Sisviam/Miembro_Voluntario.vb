@@ -29,9 +29,8 @@
     End Function
 
     Public Function Asignar_id_Miembro_Voluntario() As Integer
-        'Se obtiene un numero aleatorio para asignar?
-        Dim val As Integer = 1
-        Return val
+        BDcadena = "SELECT id_mv FROM sisviam.persona;"
+        Return AsignarId("id_mv")
     End Function
 
     Public Function Modificar_Miembro_Voluntario()
@@ -40,10 +39,23 @@
 
     Dim lista As ListViewItem
 
-    Private Sub Listar()
-        'Listar todos los elementos de la base de datos
-        lista = New ListViewItem(New String() {nombre, CStr(edad), direccion, telefono, sexo, profesion_estudios, CStr(fecha_ingreso), funcion})
-        ListView1.Items.AddRange(New ListViewItem() {lista})
+    Private Sub Miembro_Voluntario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        nombre = ""
+        edad = 0
+        direccion = ""
+        telefono = ""
+        sexo = ""
+        profesion_estudios = ""
+        fecha_ingreso = Now.ToShortDateString
+        funcion = ""
+        Limpiar()
+        TablaDgv.Columns("Nombre").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Dirección").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Teléfono").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Género").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Profesión o estudios").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Fecha de ingreso").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Función").SortMode = DataGridViewColumnSortMode.NotSortable
     End Sub
 
     Private Sub Limpiar()
@@ -56,30 +68,17 @@
         FechaDtp.Text = Now.ToShortDateString
         FemeninoRdb.Checked = False
         MasculinoRdb.Checked = False
+        BDcadena = "SELECT 'Nombre','Dirección','Teléfono','Género','Profesión o estudios','Fecha de ingreso','Función' FROM sisviam.persona;"
+        TablaDgv.DataSource = ObtenerTabla()
     End Sub
 
-    Private Sub Miembro_Voluntario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        id_mv = 0
-        nombre = ""
-        edad = 0
-        direccion = ""
-        telefono = ""
-        sexo = ""
-        profesion_estudios = ""
-        fecha_ingreso = Now.ToShortDateString
-        funcion = ""
-        Listar()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub GuardarBtn_Click(sender As Object, e As EventArgs) Handles GuardarBtn.Click
         Ingresar_Miembro_Voluntario()
-        Listar()
         Limpiar()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub ModificarBtn_Click(sender As Object, e As EventArgs) Handles ModificarBtn.Click
         Modificar_Miembro_Voluntario()
-        Listar()
         Limpiar()
     End Sub
 End Class

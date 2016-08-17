@@ -3,17 +3,17 @@ Imports MySql.Data.Types
 Imports MySql.Data.MySqlClient
 
 Module Base_Datos
-    Public BDcadena As String = "server=localhost; database=sisviam; user id=JAM; password=Sisviam2016"
-    Public BDconexion As New MySqlConnection(BDcadena)
+    Public BDcadena As String = "server=localhost; database=sisviam; user id=Sisviam; password=Sisviam2016"
+    Private BDconexion As New MySqlConnection(BDcadena)
 
     Public Function Conectar() As Boolean
         Try
             BDconexion.Open()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
-            Return False
+            Return True
         End Try
-        Return True
+        Return False
     End Function
 
     Public Sub Desconectar()

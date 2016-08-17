@@ -22,17 +22,8 @@ Partial Class Miembro_Voluntario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ModificarBtn = New System.Windows.Forms.Button()
+        Me.GuardarBtn = New System.Windows.Forms.Button()
         Me.AniosCmb = New System.Windows.Forms.ComboBox()
         Me.FechaDtp = New System.Windows.Forms.DateTimePicker()
         Me.FemeninoRdb = New System.Windows.Forms.RadioButton()
@@ -50,78 +41,29 @@ Partial Class Miembro_Voluntario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ListView1
+        'ModificarBtn
         '
-        Me.ListView1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
-        Me.ListView1.Location = New System.Drawing.Point(12, 12)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(710, 285)
-        Me.ListView1.TabIndex = 40
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.ModificarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.ModificarBtn.Location = New System.Drawing.Point(389, 376)
+        Me.ModificarBtn.Name = "ModificarBtn"
+        Me.ModificarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.ModificarBtn.TabIndex = 10
+        Me.ModificarBtn.Text = "Modificar"
+        Me.ModificarBtn.UseVisualStyleBackColor = True
         '
-        'ColumnHeader1
+        'GuardarBtn
         '
-        Me.ColumnHeader1.Text = "Nombre"
-        Me.ColumnHeader1.Width = 134
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Edad"
-        Me.ColumnHeader2.Width = 68
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Dirección"
-        Me.ColumnHeader3.Width = 95
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Teléfono"
-        Me.ColumnHeader4.Width = 98
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Género"
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Profesión/Estudios"
-        Me.ColumnHeader6.Width = 103
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "F. de Ingreso"
-        Me.ColumnHeader7.Width = 79
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Función"
-        Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.ColumnHeader8.Width = 69
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button2.Location = New System.Drawing.Point(389, 376)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Modificar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button1.Location = New System.Drawing.Point(246, 376)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GuardarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.GuardarBtn.Location = New System.Drawing.Point(246, 376)
+        Me.GuardarBtn.Name = "GuardarBtn"
+        Me.GuardarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.GuardarBtn.TabIndex = 9
+        Me.GuardarBtn.Text = "Guardar"
+        Me.GuardarBtn.UseVisualStyleBackColor = True
         '
         'AniosCmb
         '
@@ -289,13 +231,31 @@ Partial Class Miembro_Voluntario
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "Nombre"
         '
+        'TablaDgv
+        '
+        Me.TablaDgv.AllowUserToAddRows = False
+        Me.TablaDgv.AllowUserToDeleteRows = False
+        Me.TablaDgv.AllowUserToOrderColumns = True
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TablaDgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TablaDgv.Location = New System.Drawing.Point(12, 12)
+        Me.TablaDgv.MultiSelect = False
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.ReadOnly = True
+        Me.TablaDgv.RowHeadersVisible = False
+        Me.TablaDgv.Size = New System.Drawing.Size(710, 285)
+        Me.TablaDgv.TabIndex = 59
+        '
         'Miembro_Voluntario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 411)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TablaDgv)
+        Me.Controls.Add(Me.ModificarBtn)
+        Me.Controls.Add(Me.GuardarBtn)
         Me.Controls.Add(Me.AniosCmb)
         Me.Controls.Add(Me.FechaDtp)
         Me.Controls.Add(Me.FemeninoRdb)
@@ -313,26 +273,17 @@ Partial Class Miembro_Voluntario
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListView1)
         Me.MinimumSize = New System.Drawing.Size(750, 450)
         Me.Name = "Miembro_Voluntario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Miembros y Voluntarios"
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
-    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ModificarBtn As System.Windows.Forms.Button
+    Friend WithEvents GuardarBtn As System.Windows.Forms.Button
     Friend WithEvents AniosCmb As System.Windows.Forms.ComboBox
     Friend WithEvents FechaDtp As System.Windows.Forms.DateTimePicker
     Friend WithEvents FemeninoRdb As System.Windows.Forms.RadioButton
@@ -350,4 +301,5 @@ Partial Class Miembro_Voluntario
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TablaDgv As System.Windows.Forms.DataGridView
 End Class

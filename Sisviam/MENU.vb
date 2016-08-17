@@ -36,11 +36,16 @@
             Catch exc As InvalidCastException
             End Try
         Next
-        If (Not Conectar()) Then MsgBox("No se Puede Acceder a la Base de Datos")
+        If Conectar() Then MsgBox("No se Puede Acceder a la Base de Datos")
+        BDcadena = ""
     End Sub
 
     Private Sub PersonaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PersonaToolStripMenuItem.Click
         Persona.MdiParent = Me
         Persona.Show()
+    End Sub
+
+    Private Sub MENU_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Desconectar()
     End Sub
 End Class
