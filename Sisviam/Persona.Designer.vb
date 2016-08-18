@@ -36,9 +36,9 @@ Partial Class Persona
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(239, 224)
+        Me.Label1.Location = New System.Drawing.Point(241, 224)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 0
@@ -46,9 +46,9 @@ Partial Class Persona
         '
         'Label2
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(238, 250)
+        Me.Label2.Location = New System.Drawing.Point(240, 250)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 1
@@ -56,9 +56,9 @@ Partial Class Persona
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(238, 276)
+        Me.Label3.Location = New System.Drawing.Point(240, 276)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 2
@@ -66,24 +66,24 @@ Partial Class Persona
         '
         'NombreTxt
         '
-        Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.NombreTxt.Location = New System.Drawing.Point(308, 221)
+        Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.NombreTxt.Location = New System.Drawing.Point(310, 221)
         Me.NombreTxt.Name = "NombreTxt"
         Me.NombreTxt.Size = New System.Drawing.Size(100, 20)
         Me.NombreTxt.TabIndex = 1
         '
         'DireccionTxt
         '
-        Me.DireccionTxt.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.DireccionTxt.Location = New System.Drawing.Point(308, 247)
+        Me.DireccionTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.DireccionTxt.Location = New System.Drawing.Point(310, 247)
         Me.DireccionTxt.Name = "DireccionTxt"
         Me.DireccionTxt.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTxt.TabIndex = 2
         '
         'TelefonoTxt
         '
-        Me.TelefonoTxt.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TelefonoTxt.Location = New System.Drawing.Point(308, 273)
+        Me.TelefonoTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TelefonoTxt.Location = New System.Drawing.Point(310, 273)
         Me.TelefonoTxt.Name = "TelefonoTxt"
         Me.TelefonoTxt.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTxt.TabIndex = 3
@@ -100,6 +100,7 @@ Partial Class Persona
         '
         'ModificarBtn
         '
+        Me.ModificarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ModificarBtn.Location = New System.Drawing.Point(347, 323)
         Me.ModificarBtn.Name = "ModificarBtn"
         Me.ModificarBtn.Size = New System.Drawing.Size(75, 23)
@@ -112,6 +113,9 @@ Partial Class Persona
         Me.TablaDgv.AllowUserToAddRows = False
         Me.TablaDgv.AllowUserToDeleteRows = False
         Me.TablaDgv.AllowUserToOrderColumns = True
+        Me.TablaDgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TablaDgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize

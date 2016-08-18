@@ -1,26 +1,50 @@
 ﻿Public Class Campania
+    Private id_camp As Integer
     Private lugar As String
     Private direccion As String
     Private fecha As Date
     Private numero_atenciones As Integer
 
     Public Function Ingresar_Campania()
+        BDcadena = "SELECT id_camp FROM sisviam.campania;"
+        id_camp = AsignarId("id_camp")
         lugar = LugarTxt.Text
         direccion = DireccionTxt.Text
         numero_atenciones = NatencionesTxt.Text
         fecha = FechaDtp.Text
+        BDcadena = "INSERT INTO `sisviam`.`campania` (`id_camp`,`Lugar`,`Dirección`,`Fecha`,`Número de atenciones`) VALUES ('" + CStr(id_camp) + "', '" + lugar + "','" + direccion + "', '" + CStr(fecha) + "', '" + CStr(numero_atenciones) + "');"
+        Almacenar_Datos()
     End Function
 
     Public Function Modificar_Campania()
-        'Actualizar base de datos Objeto Me
+        Dim y As Integer = CInt(TablaDgv.SelectedCells(0).RowIndex) 'filas
+        Dim x As Integer = CInt(TablaDgv.SelectedCells(0).ColumnIndex) 'columnas
+        Dim atributo As String = ""
+        Select Case (x)
+            Case 0
+                atributo = "Lugar"
+            Case 1
+                atributo = "Dirección"
+            Case 2
+                atributo = "Fecha"
+            Case 3
+                atributo = "Número de atenciones"
+        End Select
+        Dim nuevo As String = InputBox("Ingrese un nuevo dato para: " + atributo, "Modificar", CStr(TablaDgv.SelectedCells(0).Value))
+        BDcadena = "UPDATE `sisviam`.`campania` SET `" + atributo + "`='" + nuevo + "' WHERE `id_camp`='" + CStr(y) + "';"
+        Actualizar_Datos()
     End Function
 
-    Dim lista As ListViewItem
-
-    Private Sub Listar()
-        'Listar todos los elementos de la base de datos
-        lista = New ListViewItem(New String() {lugar, direccion, CStr(fecha), CStr(numero_atenciones)})
-        ListView1.Items.AddRange(New ListViewItem() {lista})
+    Private Sub Campania_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lugar = ""
+        direccion = ""
+        fecha = Now.ToShortDateString
+        numero_atenciones = 0
+        Limpiar()
+        TablaDgv.Columns("Lugar").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Dirección").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Fecha").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Número de atenciones").SortMode = DataGridViewColumnSortMode.NotSortable
     End Sub
 
     Private Sub Limpiar()
@@ -28,25 +52,17 @@
         DireccionTxt.Text = ""
         NatencionesTxt.Text = ""
         FechaDtp.Text = Now.ToShortDateString
+        BDcadena = "SELECT `Lugar`,`Dirección`,`Fecha`,`Número de atenciones` FROM sisviam.campania;"
+        TablaDgv.DataSource = ObtenerTabla()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub GuardarBtn_Click(sender As Object, e As EventArgs) Handles GuardarBtn.Click
         Ingresar_Campania()
-        Listar()
         Limpiar()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub ModificarBtn_Click(sender As Object, e As EventArgs) Handles ModificarBtn.Click
         Modificar_Campania()
-        Listar()
         Limpiar()
-    End Sub
-
-    Private Sub Campania_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lugar = ""
-        direccion = ""
-        fecha = Now.ToShortDateString
-        numero_atenciones = 0
-        Listar()
     End Sub
 End Class

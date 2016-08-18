@@ -10,8 +10,7 @@
     Private observacion As String
 
     Public Function Ingresar_Can()
-        'Envia a la base de datos objeto Me
-        id_can = Asignar_id_Can()
+        id_can = Asignar_id_can()
         nombre = NombreTxt.Text
         raza = RazaTxt.Text
         color = ColorTxt.Text
@@ -27,24 +26,61 @@
         If (AniosCmb.Text = "Años") Then edad = 0 Else edad = 12 * CInt(AniosCmb.Text)
         If (MesesCmb.Text = "Meses") Then edad += 0 Else edad += CInt(MesesCmb.Text)
         fecha_ingreso = CDate(FechaDtp.Text)
+        BDcadena = "INSERT INTO `sisviam`.`can` (`id_can`,`Nombre`,`Raza`,`Color`,`Sexo`,`Peso`,`Observación`,`Edad`,`Fecha de ingreso`) VALUES ('" + CStr(id_can) + "', '" + nombre + "','" + raza + "', '" + color + "', '" + sexo + "','" + CStr(peso) + "','" + observacion + "','" + CStr(edad) + "','" + CStr(fecha_ingreso) + "');"
+        Almacenar_Datos()
     End Function
 
-    Public Function Asignar_id_Can() As Integer
-        'Se obtiene numero aleatorio para asignar
-        Dim val As Integer = CInt(Rnd(10))
-        Return val
+    Public Function Asignar_id_can() As Integer
+        BDcadena = "SELECT id_can FROM sisviam.can;"
+        Return AsignarId("id_can")
     End Function
 
     Public Function Modificar_Can()
-        'Actualiza base de datos objeto Me
+        Dim y As Integer = CInt(TablaDgv.SelectedCells(0).RowIndex) 'filas
+        Dim x As Integer = CInt(TablaDgv.SelectedCells(0).ColumnIndex) 'columnas
+        Dim atributo As String = ""
+        Select Case (x)
+            Case 0
+                atributo = "Nombre"
+            Case 1
+                atributo = "Raza"
+            Case 2
+                atributo = "Color"
+            Case 3
+                atributo = "Sexo"
+            Case 4
+                atributo = "Peso"
+            Case 5
+                atributo = "Observación"
+            Case 6
+                atributo = "Edad"
+            Case 7
+                atributo = "Fecha de ingreso"
+        End Select
+        Dim nuevo As String = InputBox("Ingrese un nuevo dato para: " + atributo, "Modificar", CStr(TablaDgv.SelectedCells(0).Value))
+        BDcadena = "UPDATE `sisviam`.`can` SET `" + atributo + "`='" + nuevo + "' WHERE `id_can`='" + CStr(y) + "';"
+        Actualizar_Datos()
     End Function
 
-    Dim lista As ListViewItem
-
-    Private Sub Listar()
-        'Listar todo los elementos de la base de datos
-        lista = New ListViewItem(New String() {nombre, raza, color, sexo, CStr(peso), CStr(edad), CStr(fecha_ingreso), observacion})
-        ListView1.Items.AddRange(New ListViewItem() {lista})
+    Private Sub Can_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        id_can = 0
+        nombre = ""
+        edad = 0
+        raza = ""
+        color = ""
+        sexo = ""
+        peso = 0
+        fecha_ingreso = Now.ToShortDateString
+        observacion = ""
+        Limpiar()
+        TablaDgv.Columns("Nombre").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Raza").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Color").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Sexo").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Peso").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Observación").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Edad").SortMode = DataGridViewColumnSortMode.NotSortable
+        TablaDgv.Columns("Fecha de ingreso").SortMode = DataGridViewColumnSortMode.NotSortable
     End Sub
 
     Private Sub Limpiar()
@@ -58,44 +94,17 @@
         FechaDtp.Text = Now.ToShortDateString
         HembraRdb.Checked = False
         MachoRdb.Checked = False
+        BDcadena = "SELECT `Nombre`,`Raza`,`Color`,`Sexo`,`Peso`,`Observación`,`Edad`,`Fecha de ingreso` FROM sisviam.can;"
+        TablaDgv.DataSource = ObtenerTabla()
     End Sub
 
-    Private Sub Can_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        id_can = 0
-        nombre = ""
-        edad = 0
-        raza = ""
-        color = ""
-        sexo = ""
-        peso = 0
-        fecha_ingreso = Now.ToShortDateString
-        observacion = ""
-        Listar()
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub GuardarBtn_Click_1(sender As Object, e As EventArgs) Handles GuardarBtn.Click
         Ingresar_Can()
-        Listar()
         Limpiar()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub ModificarBtn_Click(sender As Object, e As EventArgs) Handles ModificarBtn.Click
         Modificar_Can()
-        Listar()
         Limpiar()
     End Sub
-
-    Private Sub ListView1_SelectedIndexChanged_UsingItems(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
-        Dim breakfast As ListView.SelectedListViewItemCollection = Me.ListView1.SelectedItems
-        Dim item As ListViewItem
-        Dim price As Double = 0.0
-        For Each item In breakfast
-            price += Double.Parse(item.SubItems(1).Text)
-        Next
-        ' Output the price to TextBox1.
-        TextBox1.Text = CType(price, String)
-    End Sub
-
-
-
 End Class

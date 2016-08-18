@@ -67,7 +67,7 @@ Partial Class Miembro_Voluntario
         '
         'AniosCmb
         '
-        Me.AniosCmb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.AniosCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.AniosCmb.FormattingEnabled = True
         Me.AniosCmb.Items.AddRange(New Object() {"15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75"})
         Me.AniosCmb.Location = New System.Drawing.Point(272, 303)
@@ -79,7 +79,7 @@ Partial Class Miembro_Voluntario
         'FechaDtp
         '
         Me.FechaDtp.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar
-        Me.FechaDtp.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.FechaDtp.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.FechaDtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.FechaDtp.Location = New System.Drawing.Point(461, 331)
         Me.FechaDtp.Name = "FechaDtp"
@@ -88,7 +88,7 @@ Partial Class Miembro_Voluntario
         '
         'FemeninoRdb
         '
-        Me.FemeninoRdb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.FemeninoRdb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.FemeninoRdb.AutoSize = True
         Me.FemeninoRdb.Location = New System.Drawing.Point(74, 332)
         Me.FemeninoRdb.Name = "FemeninoRdb"
@@ -100,7 +100,7 @@ Partial Class Miembro_Voluntario
         '
         'MasculinoRdb
         '
-        Me.MasculinoRdb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MasculinoRdb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.MasculinoRdb.AutoSize = True
         Me.MasculinoRdb.Location = New System.Drawing.Point(111, 332)
         Me.MasculinoRdb.Name = "MasculinoRdb"
@@ -112,7 +112,7 @@ Partial Class Miembro_Voluntario
         '
         'FuncionTxt
         '
-        Me.FuncionTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.FuncionTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.FuncionTxt.Location = New System.Drawing.Point(623, 331)
         Me.FuncionTxt.Name = "FuncionTxt"
         Me.FuncionTxt.Size = New System.Drawing.Size(100, 20)
@@ -120,7 +120,7 @@ Partial Class Miembro_Voluntario
         '
         'Profesion_EstudiosTxt
         '
-        Me.Profesion_EstudiosTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Profesion_EstudiosTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Profesion_EstudiosTxt.Location = New System.Drawing.Point(272, 331)
         Me.Profesion_EstudiosTxt.Name = "Profesion_EstudiosTxt"
         Me.Profesion_EstudiosTxt.Size = New System.Drawing.Size(100, 20)
@@ -128,7 +128,7 @@ Partial Class Miembro_Voluntario
         '
         'DireccionTxt
         '
-        Me.DireccionTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DireccionTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.DireccionTxt.Location = New System.Drawing.Point(461, 304)
         Me.DireccionTxt.Name = "DireccionTxt"
         Me.DireccionTxt.Size = New System.Drawing.Size(100, 20)
@@ -136,7 +136,7 @@ Partial Class Miembro_Voluntario
         '
         'TelefonoTxt
         '
-        Me.TelefonoTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TelefonoTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.TelefonoTxt.Location = New System.Drawing.Point(623, 304)
         Me.TelefonoTxt.Name = "TelefonoTxt"
         Me.TelefonoTxt.Size = New System.Drawing.Size(100, 20)
@@ -144,7 +144,7 @@ Partial Class Miembro_Voluntario
         '
         'NombreTxt
         '
-        Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.NombreTxt.Location = New System.Drawing.Point(63, 304)
         Me.NombreTxt.Name = "NombreTxt"
         Me.NombreTxt.Size = New System.Drawing.Size(100, 20)
@@ -153,7 +153,7 @@ Partial Class Miembro_Voluntario
         '
         'Label8
         '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(568, 334)
         Me.Label8.Name = "Label8"
@@ -163,7 +163,7 @@ Partial Class Miembro_Voluntario
         '
         'Label7
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(386, 334)
         Me.Label7.Name = "Label7"
@@ -173,7 +173,7 @@ Partial Class Miembro_Voluntario
         '
         'Label6
         '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(170, 334)
         Me.Label6.Name = "Label6"
@@ -183,7 +183,7 @@ Partial Class Miembro_Voluntario
         '
         'Label5
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(170, 307)
         Me.Label5.Name = "Label5"
@@ -193,7 +193,7 @@ Partial Class Miembro_Voluntario
         '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(13, 334)
         Me.Label4.Name = "Label4"
@@ -203,7 +203,7 @@ Partial Class Miembro_Voluntario
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(386, 307)
         Me.Label3.Name = "Label3"
@@ -213,7 +213,7 @@ Partial Class Miembro_Voluntario
         '
         'Label2
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(568, 307)
         Me.Label2.Name = "Label2"
@@ -223,7 +223,7 @@ Partial Class Miembro_Voluntario
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(13, 307)
         Me.Label1.Name = "Label1"
@@ -236,6 +236,9 @@ Partial Class Miembro_Voluntario
         Me.TablaDgv.AllowUserToAddRows = False
         Me.TablaDgv.AllowUserToDeleteRows = False
         Me.TablaDgv.AllowUserToOrderColumns = True
+        Me.TablaDgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TablaDgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize

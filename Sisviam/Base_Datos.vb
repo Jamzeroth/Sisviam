@@ -65,11 +65,6 @@ Module Base_Datos
     End Function
 
     Public Function Actualizar_Datos()
-        Try
-            Dim Ejecuta As New MySql.Data.MySqlClient.MySqlCommand(BDcadena, BDconexion)
-            Ejecuta.ExecuteNonQuery()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Almacenar_Datos()
     End Function
 End Module

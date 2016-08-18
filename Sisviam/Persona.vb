@@ -5,15 +5,15 @@
     Private telefono As String
 
     Public Function Ingresar_Persona()
+        id_persona = Asignar_id_persona()
         nombre = NombreTxt.Text
         direccion = DireccionTxt.Text
         telefono = TelefonoTxt.Text
-        id_persona = Asignar_id_Persona()
         BDcadena = "INSERT INTO `sisviam`.`persona` (`id_persona`, `Nombre`, `Dirección`, `Teléfono`) VALUES ('" + CStr(id_persona) + "', '" + nombre + "', '" + direccion + "', '" + telefono + "');"
         Almacenar_Datos()
     End Function
 
-    Public Function Asignar_id_Persona() As Integer
+    Public Function Asignar_id_persona() As Integer
         BDcadena = "SELECT id_persona FROM sisviam.persona;"
         Return AsignarId("id_persona")
     End Function
@@ -50,7 +50,7 @@
         NombreTxt.Text = ""
         DireccionTxt.Text = ""
         TelefonoTxt.Text = ""
-        BDcadena = "SELECT Nombre,Dirección,Teléfono FROM sisviam.persona;"
+        BDcadena = "SELECT `Nombre`,`Dirección`,`Teléfono` FROM sisviam.persona;"
         TablaDgv.DataSource = ObtenerTabla()
     End Sub
 

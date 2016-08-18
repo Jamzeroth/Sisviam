@@ -22,7 +22,7 @@ Partial Class Can
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GuardarBtn = New System.Windows.Forms.Button()
         Me.MesesCmb = New System.Windows.Forms.ComboBox()
         Me.AniosCmb = New System.Windows.Forms.ComboBox()
         Me.FechaDtp = New System.Windows.Forms.DateTimePicker()
@@ -41,32 +41,24 @@ Partial Class Can
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ModificarBtn = New System.Windows.Forms.Button()
+        Me.TablaDgv = New System.Windows.Forms.DataGridView()
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'GuardarBtn
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button1.Location = New System.Drawing.Point(260, 376)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Guardar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GuardarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.GuardarBtn.Location = New System.Drawing.Point(260, 376)
+        Me.GuardarBtn.Name = "GuardarBtn"
+        Me.GuardarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.GuardarBtn.TabIndex = 10
+        Me.GuardarBtn.Text = "Guardar"
+        Me.GuardarBtn.UseVisualStyleBackColor = True
         '
         'MesesCmb
         '
-        Me.MesesCmb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MesesCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.MesesCmb.FormattingEnabled = True
         Me.MesesCmb.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"})
         Me.MesesCmb.Location = New System.Drawing.Point(275, 329)
@@ -77,7 +69,7 @@ Partial Class Can
         '
         'AniosCmb
         '
-        Me.AniosCmb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.AniosCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.AniosCmb.FormattingEnabled = True
         Me.AniosCmb.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
         Me.AniosCmb.Location = New System.Drawing.Point(226, 329)
@@ -89,7 +81,7 @@ Partial Class Can
         'FechaDtp
         '
         Me.FechaDtp.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar
-        Me.FechaDtp.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.FechaDtp.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.FechaDtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.FechaDtp.Location = New System.Drawing.Point(427, 330)
         Me.FechaDtp.Name = "FechaDtp"
@@ -98,7 +90,7 @@ Partial Class Can
         '
         'HembraRdb
         '
-        Me.HembraRdb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.HembraRdb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.HembraRdb.AutoSize = True
         Me.HembraRdb.Location = New System.Drawing.Point(607, 305)
         Me.HembraRdb.Name = "HembraRdb"
@@ -110,7 +102,7 @@ Partial Class Can
         '
         'MachoRdb
         '
-        Me.MachoRdb.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MachoRdb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.MachoRdb.AutoSize = True
         Me.MachoRdb.Location = New System.Drawing.Point(669, 306)
         Me.MachoRdb.Name = "MachoRdb"
@@ -122,7 +114,7 @@ Partial Class Can
         '
         'ObservacionTxt
         '
-        Me.ObservacionTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ObservacionTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ObservacionTxt.Location = New System.Drawing.Point(621, 330)
         Me.ObservacionTxt.Name = "ObservacionTxt"
         Me.ObservacionTxt.Size = New System.Drawing.Size(100, 20)
@@ -130,7 +122,7 @@ Partial Class Can
         '
         'PesoTxt
         '
-        Me.PesoTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PesoTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PesoTxt.Location = New System.Drawing.Point(58, 329)
         Me.PesoTxt.Name = "PesoTxt"
         Me.PesoTxt.Size = New System.Drawing.Size(100, 20)
@@ -138,7 +130,7 @@ Partial Class Can
         '
         'ColorTxt
         '
-        Me.ColorTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ColorTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ColorTxt.Location = New System.Drawing.Point(427, 303)
         Me.ColorTxt.Name = "ColorTxt"
         Me.ColorTxt.Size = New System.Drawing.Size(100, 20)
@@ -146,7 +138,7 @@ Partial Class Can
         '
         'RazaTxt
         '
-        Me.RazaTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RazaTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.RazaTxt.Location = New System.Drawing.Point(226, 303)
         Me.RazaTxt.Name = "RazaTxt"
         Me.RazaTxt.Size = New System.Drawing.Size(100, 20)
@@ -154,7 +146,7 @@ Partial Class Can
         '
         'NombreTxt
         '
-        Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.NombreTxt.Location = New System.Drawing.Point(58, 303)
         Me.NombreTxt.Name = "NombreTxt"
         Me.NombreTxt.Size = New System.Drawing.Size(100, 20)
@@ -163,7 +155,7 @@ Partial Class Can
         '
         'Label8
         '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(548, 333)
         Me.Label8.Name = "Label8"
@@ -173,7 +165,7 @@ Partial Class Can
         '
         'Label7
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(352, 332)
         Me.Label7.Name = "Label7"
@@ -183,7 +175,7 @@ Partial Class Can
         '
         'Label6
         '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(8, 332)
         Me.Label6.Name = "Label6"
@@ -193,7 +185,7 @@ Partial Class Can
         '
         'Label5
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(188, 332)
         Me.Label5.Name = "Label5"
@@ -203,7 +195,7 @@ Partial Class Can
         '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(548, 307)
         Me.Label4.Name = "Label4"
@@ -213,7 +205,7 @@ Partial Class Can
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(352, 306)
         Me.Label3.Name = "Label3"
@@ -223,7 +215,7 @@ Partial Class Can
         '
         'Label2
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(188, 306)
         Me.Label2.Name = "Label2"
@@ -233,7 +225,7 @@ Partial Class Can
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(8, 306)
         Me.Label1.Name = "Label1"
@@ -241,81 +233,44 @@ Partial Class Can
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Nombre"
         '
-        'ListView1
+        'ModificarBtn
         '
-        Me.ListView1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
-        Me.ListView1.Location = New System.Drawing.Point(12, 12)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(710, 285)
-        Me.ListView1.TabIndex = 39
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.ModificarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.ModificarBtn.Location = New System.Drawing.Point(400, 376)
+        Me.ModificarBtn.Name = "ModificarBtn"
+        Me.ModificarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.ModificarBtn.TabIndex = 11
+        Me.ModificarBtn.Text = "Modificar"
+        Me.ModificarBtn.UseVisualStyleBackColor = True
         '
-        'ColumnHeader1
+        'TablaDgv
         '
-        Me.ColumnHeader1.Text = "Nombre"
-        Me.ColumnHeader1.Width = 89
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Raza"
-        Me.ColumnHeader2.Width = 68
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Color"
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Sexo"
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Peso"
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Edad"
-        Me.ColumnHeader6.Width = 103
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "F. de Ingreso"
-        Me.ColumnHeader7.Width = 80
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Observacion"
-        Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.ColumnHeader8.Width = 183
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button2.Location = New System.Drawing.Point(400, 376)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Modificar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(560, 375)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 40
+        Me.TablaDgv.AllowUserToAddRows = False
+        Me.TablaDgv.AllowUserToDeleteRows = False
+        Me.TablaDgv.AllowUserToOrderColumns = True
+        Me.TablaDgv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TablaDgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TablaDgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TablaDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaDgv.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TablaDgv.Location = New System.Drawing.Point(11, 12)
+        Me.TablaDgv.MultiSelect = False
+        Me.TablaDgv.Name = "TablaDgv"
+        Me.TablaDgv.ReadOnly = True
+        Me.TablaDgv.RowHeadersVisible = False
+        Me.TablaDgv.Size = New System.Drawing.Size(710, 285)
+        Me.TablaDgv.TabIndex = 60
         '
         'Can
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 411)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TablaDgv)
+        Me.Controls.Add(Me.ModificarBtn)
+        Me.Controls.Add(Me.GuardarBtn)
         Me.Controls.Add(Me.MesesCmb)
         Me.Controls.Add(Me.AniosCmb)
         Me.Controls.Add(Me.FechaDtp)
@@ -338,11 +293,12 @@ Partial Class Can
         Me.Name = "Can"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Canes"
+        CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents GuardarBtn As System.Windows.Forms.Button
     Friend WithEvents MesesCmb As System.Windows.Forms.ComboBox
     Friend WithEvents AniosCmb As System.Windows.Forms.ComboBox
     Friend WithEvents FechaDtp As System.Windows.Forms.DateTimePicker
@@ -361,15 +317,6 @@ Partial Class Can
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
-    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents ModificarBtn As System.Windows.Forms.Button
+    Friend WithEvents TablaDgv As System.Windows.Forms.DataGridView
 End Class
