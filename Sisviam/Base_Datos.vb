@@ -55,6 +55,19 @@ Module Base_Datos
         End Try
     End Function
 
+    Public Function ObtenerId() As Integer
+        Try
+            Dim adaptabla As New MySql.Data.MySqlClient.MySqlDataAdapter(BDcadena, BDconexion)
+            Dim initabla As New DataSet
+            adaptabla.Fill(initabla, "Tabla")
+            Dim resultabla As DataTable
+            resultabla = initabla.Tables("Tabla")
+            Return CInt(resultabla.Rows(0).Item(0))
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Function
+
     Public Function Almacenar_Datos()
         Try
             Dim Ejecuta As New MySql.Data.MySqlClient.MySqlCommand(BDcadena, BDconexion)

@@ -31,7 +31,6 @@ Partial Class Atencion_Ambulatoria
         Me.ICanBtn = New System.Windows.Forms.Button()
         Me.IPersonaBtn = New System.Windows.Forms.Button()
         Me.GuardarBtn = New System.Windows.Forms.Button()
-        Me.ModificarBtn = New System.Windows.Forms.Button()
         Me.TablaDgv = New System.Windows.Forms.DataGridView()
         CType(Me.TablaDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -40,7 +39,7 @@ Partial Class Atencion_Ambulatoria
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(29, 264)
+        Me.Label1.Location = New System.Drawing.Point(150, 314)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(26, 13)
         Me.Label1.TabIndex = 0
@@ -50,7 +49,7 @@ Partial Class Atencion_Ambulatoria
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(29, 291)
+        Me.Label2.Location = New System.Drawing.Point(150, 341)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 13)
         Me.Label2.TabIndex = 1
@@ -60,7 +59,7 @@ Partial Class Atencion_Ambulatoria
         '
         Me.CanCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.CanCmb.FormattingEnabled = True
-        Me.CanCmb.Location = New System.Drawing.Point(104, 261)
+        Me.CanCmb.Location = New System.Drawing.Point(225, 311)
         Me.CanCmb.Name = "CanCmb"
         Me.CanCmb.Size = New System.Drawing.Size(140, 21)
         Me.CanCmb.TabIndex = 1
@@ -70,7 +69,7 @@ Partial Class Atencion_Ambulatoria
         '
         Me.PersonaCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PersonaCmb.FormattingEnabled = True
-        Me.PersonaCmb.Location = New System.Drawing.Point(104, 288)
+        Me.PersonaCmb.Location = New System.Drawing.Point(225, 338)
         Me.PersonaCmb.Name = "PersonaCmb"
         Me.PersonaCmb.Size = New System.Drawing.Size(140, 21)
         Me.PersonaCmb.TabIndex = 3
@@ -79,7 +78,7 @@ Partial Class Atencion_Ambulatoria
         'ICanBtn
         '
         Me.ICanBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ICanBtn.Location = New System.Drawing.Point(332, 259)
+        Me.ICanBtn.Location = New System.Drawing.Point(453, 309)
         Me.ICanBtn.Name = "ICanBtn"
         Me.ICanBtn.Size = New System.Drawing.Size(75, 23)
         Me.ICanBtn.TabIndex = 2
@@ -89,7 +88,7 @@ Partial Class Atencion_Ambulatoria
         'IPersonaBtn
         '
         Me.IPersonaBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.IPersonaBtn.Location = New System.Drawing.Point(310, 286)
+        Me.IPersonaBtn.Location = New System.Drawing.Point(431, 336)
         Me.IPersonaBtn.Name = "IPersonaBtn"
         Me.IPersonaBtn.Size = New System.Drawing.Size(123, 23)
         Me.IPersonaBtn.TabIndex = 4
@@ -99,22 +98,12 @@ Partial Class Atencion_Ambulatoria
         'GuardarBtn
         '
         Me.GuardarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.GuardarBtn.Location = New System.Drawing.Point(134, 326)
+        Me.GuardarBtn.Location = New System.Drawing.Point(255, 376)
         Me.GuardarBtn.Name = "GuardarBtn"
         Me.GuardarBtn.Size = New System.Drawing.Size(75, 23)
         Me.GuardarBtn.TabIndex = 5
         Me.GuardarBtn.Text = "Guardar"
         Me.GuardarBtn.UseVisualStyleBackColor = True
-        '
-        'ModificarBtn
-        '
-        Me.ModificarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ModificarBtn.Location = New System.Drawing.Point(274, 326)
-        Me.ModificarBtn.Name = "ModificarBtn"
-        Me.ModificarBtn.Size = New System.Drawing.Size(75, 23)
-        Me.ModificarBtn.TabIndex = 6
-        Me.ModificarBtn.Text = "Modificar"
-        Me.ModificarBtn.UseVisualStyleBackColor = True
         '
         'TablaDgv
         '
@@ -149,16 +138,15 @@ Partial Class Atencion_Ambulatoria
         Me.TablaDgv.Name = "TablaDgv"
         Me.TablaDgv.ReadOnly = True
         Me.TablaDgv.RowHeadersVisible = False
-        Me.TablaDgv.Size = New System.Drawing.Size(460, 241)
+        Me.TablaDgv.Size = New System.Drawing.Size(703, 291)
         Me.TablaDgv.TabIndex = 62
         '
         'Atencion_Ambulatoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(484, 361)
+        Me.ClientSize = New System.Drawing.Size(727, 411)
         Me.Controls.Add(Me.TablaDgv)
-        Me.Controls.Add(Me.ModificarBtn)
         Me.Controls.Add(Me.GuardarBtn)
         Me.Controls.Add(Me.IPersonaBtn)
         Me.Controls.Add(Me.ICanBtn)
@@ -166,7 +154,7 @@ Partial Class Atencion_Ambulatoria
         Me.Controls.Add(Me.CanCmb)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.MinimumSize = New System.Drawing.Size(500, 400)
+        Me.MinimumSize = New System.Drawing.Size(743, 450)
         Me.Name = "Atencion_Ambulatoria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Atención Ambulatoria"
@@ -182,6 +170,5 @@ Partial Class Atencion_Ambulatoria
     Friend WithEvents ICanBtn As System.Windows.Forms.Button
     Friend WithEvents IPersonaBtn As System.Windows.Forms.Button
     Friend WithEvents GuardarBtn As System.Windows.Forms.Button
-    Friend WithEvents ModificarBtn As System.Windows.Forms.Button
     Friend WithEvents TablaDgv As System.Windows.Forms.DataGridView
 End Class

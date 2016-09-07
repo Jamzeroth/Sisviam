@@ -49,7 +49,7 @@ Partial Class Can
         'GuardarBtn
         '
         Me.GuardarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.GuardarBtn.Location = New System.Drawing.Point(260, 376)
+        Me.GuardarBtn.Location = New System.Drawing.Point(306, 376)
         Me.GuardarBtn.Name = "GuardarBtn"
         Me.GuardarBtn.Size = New System.Drawing.Size(75, 23)
         Me.GuardarBtn.TabIndex = 10
@@ -60,8 +60,8 @@ Partial Class Can
         '
         Me.MesesCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.MesesCmb.FormattingEnabled = True
-        Me.MesesCmb.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"})
-        Me.MesesCmb.Location = New System.Drawing.Point(275, 329)
+        Me.MesesCmb.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"})
+        Me.MesesCmb.Location = New System.Drawing.Point(321, 329)
         Me.MesesCmb.Name = "MesesCmb"
         Me.MesesCmb.Size = New System.Drawing.Size(51, 21)
         Me.MesesCmb.TabIndex = 7
@@ -72,7 +72,7 @@ Partial Class Can
         Me.AniosCmb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.AniosCmb.FormattingEnabled = True
         Me.AniosCmb.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
-        Me.AniosCmb.Location = New System.Drawing.Point(226, 329)
+        Me.AniosCmb.Location = New System.Drawing.Point(272, 329)
         Me.AniosCmb.Name = "AniosCmb"
         Me.AniosCmb.Size = New System.Drawing.Size(50, 21)
         Me.AniosCmb.TabIndex = 6
@@ -83,7 +83,7 @@ Partial Class Can
         Me.FechaDtp.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar
         Me.FechaDtp.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.FechaDtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaDtp.Location = New System.Drawing.Point(427, 330)
+        Me.FechaDtp.Location = New System.Drawing.Point(473, 330)
         Me.FechaDtp.Name = "FechaDtp"
         Me.FechaDtp.Size = New System.Drawing.Size(100, 20)
         Me.FechaDtp.TabIndex = 8
@@ -92,7 +92,7 @@ Partial Class Can
         '
         Me.HembraRdb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.HembraRdb.AutoSize = True
-        Me.HembraRdb.Location = New System.Drawing.Point(607, 305)
+        Me.HembraRdb.Location = New System.Drawing.Point(653, 305)
         Me.HembraRdb.Name = "HembraRdb"
         Me.HembraRdb.Size = New System.Drawing.Size(62, 17)
         Me.HembraRdb.TabIndex = 4
@@ -104,7 +104,7 @@ Partial Class Can
         '
         Me.MachoRdb.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.MachoRdb.AutoSize = True
-        Me.MachoRdb.Location = New System.Drawing.Point(669, 306)
+        Me.MachoRdb.Location = New System.Drawing.Point(715, 306)
         Me.MachoRdb.Name = "MachoRdb"
         Me.MachoRdb.Size = New System.Drawing.Size(58, 17)
         Me.MachoRdb.TabIndex = 4
@@ -115,7 +115,7 @@ Partial Class Can
         'ObservacionTxt
         '
         Me.ObservacionTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ObservacionTxt.Location = New System.Drawing.Point(621, 330)
+        Me.ObservacionTxt.Location = New System.Drawing.Point(667, 330)
         Me.ObservacionTxt.Name = "ObservacionTxt"
         Me.ObservacionTxt.Size = New System.Drawing.Size(100, 20)
         Me.ObservacionTxt.TabIndex = 9
@@ -123,7 +123,7 @@ Partial Class Can
         'PesoTxt
         '
         Me.PesoTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.PesoTxt.Location = New System.Drawing.Point(58, 329)
+        Me.PesoTxt.Location = New System.Drawing.Point(104, 329)
         Me.PesoTxt.Name = "PesoTxt"
         Me.PesoTxt.Size = New System.Drawing.Size(100, 20)
         Me.PesoTxt.TabIndex = 5
@@ -131,7 +131,7 @@ Partial Class Can
         'ColorTxt
         '
         Me.ColorTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ColorTxt.Location = New System.Drawing.Point(427, 303)
+        Me.ColorTxt.Location = New System.Drawing.Point(473, 303)
         Me.ColorTxt.Name = "ColorTxt"
         Me.ColorTxt.Size = New System.Drawing.Size(100, 20)
         Me.ColorTxt.TabIndex = 3
@@ -139,7 +139,7 @@ Partial Class Can
         'RazaTxt
         '
         Me.RazaTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.RazaTxt.Location = New System.Drawing.Point(226, 303)
+        Me.RazaTxt.Location = New System.Drawing.Point(272, 303)
         Me.RazaTxt.Name = "RazaTxt"
         Me.RazaTxt.Size = New System.Drawing.Size(100, 20)
         Me.RazaTxt.TabIndex = 2
@@ -147,7 +147,7 @@ Partial Class Can
         'NombreTxt
         '
         Me.NombreTxt.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.NombreTxt.Location = New System.Drawing.Point(58, 303)
+        Me.NombreTxt.Location = New System.Drawing.Point(104, 303)
         Me.NombreTxt.Name = "NombreTxt"
         Me.NombreTxt.Size = New System.Drawing.Size(100, 20)
         Me.NombreTxt.TabIndex = 1
@@ -157,7 +157,7 @@ Partial Class Can
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(548, 333)
+        Me.Label8.Location = New System.Drawing.Point(594, 333)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(67, 13)
         Me.Label8.TabIndex = 27
@@ -167,7 +167,7 @@ Partial Class Can
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(352, 332)
+        Me.Label7.Location = New System.Drawing.Point(398, 332)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(69, 13)
         Me.Label7.TabIndex = 26
@@ -177,17 +177,17 @@ Partial Class Can
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(8, 332)
+        Me.Label6.Location = New System.Drawing.Point(54, 332)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(31, 13)
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Peso"
+        Me.Label6.Text = "Peso (kg)"
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(188, 332)
+        Me.Label5.Location = New System.Drawing.Point(234, 332)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(32, 13)
         Me.Label5.TabIndex = 24
@@ -197,7 +197,7 @@ Partial Class Can
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(548, 307)
+        Me.Label4.Location = New System.Drawing.Point(594, 307)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(31, 13)
         Me.Label4.TabIndex = 23
@@ -207,7 +207,7 @@ Partial Class Can
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(352, 306)
+        Me.Label3.Location = New System.Drawing.Point(398, 306)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 22
@@ -217,7 +217,7 @@ Partial Class Can
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(188, 306)
+        Me.Label2.Location = New System.Drawing.Point(234, 306)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 13)
         Me.Label2.TabIndex = 21
@@ -227,7 +227,7 @@ Partial Class Can
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 306)
+        Me.Label1.Location = New System.Drawing.Point(54, 306)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 20
@@ -236,7 +236,7 @@ Partial Class Can
         'ModificarBtn
         '
         Me.ModificarBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ModificarBtn.Location = New System.Drawing.Point(400, 376)
+        Me.ModificarBtn.Location = New System.Drawing.Point(446, 376)
         Me.ModificarBtn.Name = "ModificarBtn"
         Me.ModificarBtn.Size = New System.Drawing.Size(75, 23)
         Me.ModificarBtn.TabIndex = 11
@@ -260,14 +260,14 @@ Partial Class Can
         Me.TablaDgv.Name = "TablaDgv"
         Me.TablaDgv.ReadOnly = True
         Me.TablaDgv.RowHeadersVisible = False
-        Me.TablaDgv.Size = New System.Drawing.Size(710, 285)
+        Me.TablaDgv.Size = New System.Drawing.Size(803, 285)
         Me.TablaDgv.TabIndex = 60
         '
         'Can
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 411)
+        Me.ClientSize = New System.Drawing.Size(827, 411)
         Me.Controls.Add(Me.TablaDgv)
         Me.Controls.Add(Me.ModificarBtn)
         Me.Controls.Add(Me.GuardarBtn)
@@ -289,7 +289,7 @@ Partial Class Can
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.MinimumSize = New System.Drawing.Size(750, 450)
+        Me.MinimumSize = New System.Drawing.Size(843, 450)
         Me.Name = "Can"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Canes"
